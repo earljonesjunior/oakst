@@ -1,0 +1,10 @@
+<div class="tags">
+        {{ with .Params.tags }}
+
+        {{ range . }}
+        <a class="tag is-light" href="/tags/{{ . | urlize }}">#{{ . }}</a>
+        {{ end }}
+
+        {{ end }}
+        
+    </div>

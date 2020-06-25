@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  {{ $style := resources.Get "/oakst.scss" | toCSS  }}
+  <link rel="stylesheet" href="{{ $style.Permalink | relURL }}" />
+  <title>{{ .Title }}</title>
+</head>
+
+<body>
+  <div class="section">
+    <div class="container">
+      <div class="columns">
+        <nav class="column">
+          {{ partial "nav.html" . }}
+        </nav>
+
+        <main class="column is-half">
+          {{block "main" . }} {{ end }}
+        </main>
+
+        <aside class="column">
+          {{ partial "tagbar.html"}}
+        </aside>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

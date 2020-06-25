@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+<nav class="breadcrumb" aria-label="breadcrumbs">
+    <ul class="subtitle">
+        <li><a href="/projects">Projects</a></li>
+        <li class="is-active"><a href="#">{{ .Title }}</a></li>
+    </ul>
+</nav>
+<div class="content">
+{{ .Content }}
+</div>
+{{ end }}
+

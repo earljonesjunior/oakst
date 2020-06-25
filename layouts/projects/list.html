@@ -1,0 +1,38 @@
+{{ define "main" }}
+<nav class="breadcrumb" aria-label="breadcrumbs">
+    <ul class="subtitle">
+        <li class="is-active"><a href="#" aria-current="page">Projects</a></li>
+    </ul>
+</nav>
+
+
+<div>
+    {{ range .Pages }}
+    <article class="media">
+
+        <div class="media-content">
+            <div class="content">
+
+                <h3 class="">
+                    <a class="has-text-dark" href="{{.RelPermalink }}">{{ .Title }}</a>
+                </h3>
+                <p>{{ .Params.Description }} </p>
+            </div>
+
+            <div class="tags">
+                {{ with .Params.tags }}
+
+                {{ range . }}
+                <a class="tag is-light" href="/tags/{{ . | urlize }}">#{{ . }}</a>
+                {{ end }}
+
+                {{ end }}
+            </div>
+
+            {{ partial "posttags.html" }}
+        </div>
+    </article>
+    {{ end }}
+</div>
+
+{{ end }}

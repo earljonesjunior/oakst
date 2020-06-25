@@ -1,0 +1,17 @@
+{{ define "main" }}
+<div class="hero">
+  <h1 class="title is-1">{{ .Params.heading }}</h1>
+  {{ .Content }}
+</div>
+{{ end }}
+
+
+{{ define "tag-bar"}}
+<div class="hero-body"></div>
+<div class="tags">
+  <span class="tag ">#software</span>
+  <span class="tag ">#hardware</span>
+  <span class="tag ">#misc.</span>
+  <span class="tag ">#other.</span>
+</div>
+{{ end }}
