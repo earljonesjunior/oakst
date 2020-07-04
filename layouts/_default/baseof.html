@@ -10,18 +10,22 @@
 </head>
 
 <body>
+
+  
   <div class="section">
+    
     <div class="container">
+      
       <div class="columns">
-        <nav class="column">
+        <nav class="column is-one-fifth">
           {{ partial "nav.html" . }}
         </nav>
 
-        <main class="column is-half">
+        <main class="column content">
           {{block "main" . }} {{ end }}
         </main>
 
-        <aside class="column">
+        <aside class="column is-one-fifth">
           {{ partial "tagbar.html"}}
         </aside>
       </div>

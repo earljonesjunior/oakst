@@ -1,8 +1,9 @@
 ---
-heading: "Hi there, I'm Jake."
+heading: "Howdy, I'm Jake."
 ---
 
-I'm a "fuller stack" embedded systems and IoT developer - we're talking front-end, back-end, and edge hardware. 
+I'm a "fuller stack" embedded systems and IoT developer with experience in
+front-end, back-end, and edge hardware systems. 
 
 
 This is Oak St. Electronics, my personal notebook / brand / portfolio.

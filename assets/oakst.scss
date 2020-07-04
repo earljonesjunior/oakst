@@ -1,2 +1,61 @@
 @charset "utf-8";
 @import "./bulma-0.9.0/bulma.sass";
+
+.media{
+    border-top: 0px !important;
+}
+
+.overflow-fix{
+    flex-shrink: unset !important;
+}
+
+.breadcrumb{
+    word-wrap: break-word !important;
+}
+
+.content h4{
+    font-weight: 500 !important;
+}
+
+.logo-container{
+
+    display: flex;
+
+    @include tablet{
+        flex-direction: column;
+
+        .oakst-title{
+            margin-top: 20px;
+        }
+    }
+
+    @include mobile{
+        flex-direction: row;
+        align-items: center;
+        margin-bottom: 1em;
+
+        .oakst-title{
+            margin-left: 30px;
+            margin-bottom: 0px;
+        }
+
+    }
+
+}
+
+#navMenu{
+    @include mobile{
+        display: none;
+        background-color: $white-bis;
+
+        a{
+            padding: 1em !important;
+        }
+
+    }
+}
+
+.display-block{
+    display: block !important;
+}
+

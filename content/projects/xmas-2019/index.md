@@ -10,7 +10,7 @@ inProgress: false
 started: 2018-11-01
 completed: 2018-12-25
 
-description: "This year's ornaments - snowflakes!"
+description: "A continuation of a new tradition."
 ---
 
 xmas 2019 stuff goes here

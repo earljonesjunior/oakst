@@ -6,12 +6,12 @@
     [[menu.main]]
         name = "About"
         url = "/"
-        weight = 10
-    [[menu.main]]
+        weight = 30
+    [[menu.main2]]
         name = "Notes"
         url = "/notes/"
         weight = 20
     [[menu.main]]
         name = "Projects"
         url = "/projects"
-        weight = 30
+        weight = 10

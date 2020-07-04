@@ -1,28 +1,61 @@
-<div class="">
-  <figure class="image is-64x64">
+<div class="logo-container">
+  <figure class="image is-48x48">
     <a href="/">
-      <img src="/brand_small.png" />
+      <img src="/logo.png" />
     </a>
   </figure>
-  <br />
-  <h1 class="title  is-4 "><a class="has-text-dark" href="/">
-      OAK ST. <br />
-      ELECTRONICS
-    </a>
-  </h1>
+  <a class="title is-5 has-text-dark oakst-title" href="/">
+    <span>OAK ST.</span><br>
+    <span>ELECTRONICS</span>
+  </a>
+
+  <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navMenu">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+  </a>
+
 </div>
-<br>
-<div class="menu">
+
+<div class="menu" id="navMenu">
   <div class="menu-list ">
     {{ $currentPage := . }}
     {{ range .Site.Menus.main }}
-      {{ $activeClass := ""}}
-      {{ $isActive := or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
-      {{ $isActive = or $isActive (eq .Name $currentPage.Title) }}
-      {{ $isActive = or $isActive (and (eq .Name "Projects") (eq $currentPage.Section "projects"))}}
-      {{ $isActive = or $isActive (and (eq .Name "Notes") (eq $currentPage.Section "notes"))}}
+    {{ $activeClass := ""}}
+    {{ $isActive := or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+    {{ $isActive = or $isActive (eq .Name $currentPage.Title) }}
+    {{ $isActive = or $isActive (and (eq .Name "Projects") (eq $currentPage.Section "projects"))}}
+    {{ $isActive = or $isActive (and (eq .Name "Notes") (eq $currentPage.Section "notes"))}}
 
-    <a class="menu-label pl-0 is-size-6 {{ if $isActive }}has-text-primary{{end}}" href="{{ .URL }}">{{ .Name }}</a></p>
+    <a class="menu-label pl-0 is-size-7 {{ if $isActive }}has-text-primary{{end}}" href="{{ .URL }}">{{ .Name }}</a></p>
     {{ end }}
   </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+      // Get all "navbar-burger" elements
+      const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    
+      // Check if there are any navbar burgers
+      if ($navbarBurgers.length > 0) {
+    
+        // Add a click event on each of them
+        $navbarBurgers.forEach( el => {
+          el.addEventListener('click', () => {
+    
+            // Get the target from the "data-target" attribute
+            const target = el.dataset.target;
+            const $target = document.getElementById(target);
+    
+            // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+            el.classList.toggle('is-active');
+            $target.classList.toggle('display-block');
+    
+          });
+        });
+      }
+    
+    });
+</script>

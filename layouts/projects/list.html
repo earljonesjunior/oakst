@@ -1,35 +1,25 @@
 {{ define "main" }}
-<nav class="breadcrumb" aria-label="breadcrumbs">
+<!--
+    <nav class="breadcrumb" aria-label="breadcrumbs">
     <ul class="subtitle">
         <li class="is-active"><a href="#" aria-current="page">Projects</a></li>
     </ul>
 </nav>
-
-
+-->
 <div>
     {{ range .Pages }}
     <article class="media">
-
-        <div class="media-content">
-            <div class="content">
-
-                <h3 class="">
+        <div class="media-left mr-5">
+            <p class="is-size-7 has-text-weight-light ">{{ .Date.Format "Jan"}} <br>
+                {{ .Date.Format "2006"}}</p>
+        </div>
+        <div class="media-content content is-clipped">
+            <div class="level is-mobile mb-2">
+                <h4 class="level-left mb-2 overflow-fix">
                     <a class="has-text-dark" href="{{.RelPermalink }}">{{ .Title }}</a>
-                </h3>
-                <p>{{ .Params.Description }} </p>
+                </h4>
             </div>
-
-            <div class="tags">
-                {{ with .Params.tags }}
-
-                {{ range . }}
-                <a class="tag is-light" href="/tags/{{ . | urlize }}">#{{ . }}</a>
-                {{ end }}
-
-                {{ end }}
-            </div>
-
-            {{ partial "posttags.html" }}
+            <p>{{ .Params.Description }} </p>
         </div>
     </article>
     {{ end }}
