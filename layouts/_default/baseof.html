@@ -11,11 +11,11 @@
 
 <body>
 
-  
-  <div class="section">
-    
+
+  <div class="section main-wrapper">
+
     <div class="container">
-      
+
       <div class="columns">
         <nav class="column is-one-fifth">
           {{ partial "nav.html" . }}
@@ -26,11 +26,24 @@
         </main>
 
         <aside class="column is-one-fifth">
-          {{ partial "tagbar.html"}}
+          {{ partial "tagbar.html" . }}
         </aside>
       </div>
     </div>
   </div>
+
+  <footer class="footer content has-text-centered is-size-7">
+      <p >
+          &copy;	Jake Jones // Oak St. Electronics
+      </p>
+      <p>Text and images licensed under 
+        <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.
+      </p>
+      <p>
+        Source code licensed under <a href="https://opensource.org/licenses/MIT">MIT</a>.
+      </p>
+  </footer>
+
 </body>
 
 </html>

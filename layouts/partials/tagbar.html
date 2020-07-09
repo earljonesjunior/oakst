@@ -1,9 +1,19 @@
 <div class="content has-text-right">
-    <span class="tag is-white">#software (1)</span>
+
+    {{ $pageTags := slice "" }}
+    {{ range (.GetTerms "tags") }}
+    {{ $pageTags = $pageTags | append .LinkTitle}}
+    {{ end }}
+
+    {{ range site.Taxonomies.tags }}
+    {{ $isActive := or (in $pageTags .Page.LinkTitle) ( eq $.Page.LinkTitle .Page.LinkTitle)}}
+
+    
+    <a class="tag {{ if $isActive }} is-link is-light {{ else }} is-white {{ end }}" href="{{ .Page.Permalink }}">
+        #{{ .Page.Title }}
+        <br>
+    </a>
     <br>
-    <span class="tag is-white ">#hardware (2)</span>
-    <br>
-    <span class="tag is-white">#misc</span>
-    <br>
-    <span class="tag is-white">#other</span>
+    {{ end }}
+
 </div>

@@ -6,23 +6,25 @@
     </ul>
 </nav>
 -->
-<div>
-    {{ range .Pages }}
-    <article class="media">
-        <div class="media-left mr-5">
-            <p class="is-size-7 has-text-weight-light ">{{ .Date.Format "Jan"}} <br>
-                {{ .Date.Format "2006"}}</p>
-        </div>
-        <div class="media-content content is-clipped">
-            <div class="level is-mobile mb-2">
-                <h4 class="level-left mb-2 overflow-fix">
-                    <a class="has-text-dark" href="{{.RelPermalink }}">{{ .Title }}</a>
-                </h4>
-            </div>
-            <p>{{ .Params.Description }} </p>
-        </div>
-    </article>
-    {{ end }}
-</div>
 
-{{ end }}
+<h3 class="has-text-weight-normal is-size-5 mb-5">PROJECTS</h1>
+    <div>
+        {{ range .Pages }}
+        <article class="media">
+            <div class="media-left mr-5">
+                <p class="is-size-7 has-text-weight-light has-text-info">{{ .Date.Format "Jan"}} <br>
+                    {{ .Date.Format "2006"}}</p>
+            </div>
+            <div class="media-content content is-clipped">
+                <div class="level is-mobile mb-2">
+                    <h4 class="level-left mb-2 overflow-fix">
+                        <a class="has-text-success" href="{{.RelPermalink }}">{{ .Title }}</a>
+                    </h4>
+                </div>
+                <p>{{ .Params.Description }} </p>
+            </div>
+        </article>
+        {{ end }}
+    </div>
+
+    {{ end }}

@@ -1,4 +1,35 @@
 @charset "utf-8";
+
+$turquoise: #2A9D8F;
+$blue: #264653;
+
+$jet: #36312fff;
+$may-green: #5d9b51ff;
+$pictorial-carmine: #b72b4eff;
+$blue-yonder: #54739aff;
+$copper-red: #c3704dff;
+$timberwolf: #d0cbc1ff;
+$tart-orange: #f0544fff;
+
+$black0: hsl(0, 0%, 4%);
+$black1: hsl(0, 0%, 7%);
+$black2: hsl(0, 0%, 14%);
+$black3: hsl(0, 0%, 21%);
+$black4: hsl(0, 0%, 29%);
+$black5: hsl(0, 0%, 48%);
+$black6: hsl(0, 0%, 71%);
+
+
+$primary: $jet;
+$link: $tart-orange;
+$success: $black1;
+$info: $black4;
+$warning: $pictorial-carmine;
+
+$footer-padding: 1.5rem 1.5rem 1.5rem;
+
+
+
 @import "./bulma-0.9.0/bulma.sass";
 
 .media{
@@ -59,3 +90,13 @@
     display: block !important;
 }
 
+
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.main-wrapper{
+    flex: 1;
+}
