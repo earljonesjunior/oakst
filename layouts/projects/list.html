@@ -1,30 +1,32 @@
 {{ define "main" }}
-<!--
-    <nav class="breadcrumb" aria-label="breadcrumbs">
-    <ul class="subtitle">
-        <li class="is-active"><a href="#" aria-current="page">Projects</a></li>
-    </ul>
-</nav>
--->
 
-<h3 class="has-text-weight-normal is-size-5 mb-5">PROJECTS</h1>
-    <div>
-        {{ range .Pages }}
-        <article class="media">
-            <div class="media-left mr-5">
-                <p class="is-size-7 has-text-weight-light has-text-info">{{ .Date.Format "Jan"}} <br>
-                    {{ .Date.Format "2006"}}</p>
-            </div>
-            <div class="media-content content is-clipped">
-                <div class="level is-mobile mb-2">
-                    <h4 class="level-left mb-2 overflow-fix">
-                        <a class="has-text-success" href="{{.RelPermalink }}">{{ .Title }}</a>
-                    </h4>
-                </div>
-                <p>{{ .Params.Description }} </p>
-            </div>
-        </article>
-        {{ end }}
-    </div>
+<h1 class="mb-5 is-uppercase">Projects</h1>
 
+<div>
+    {{ range .Pages }}
+    <article class="media">
+        <div class="media-left mr-5">
+            <p class="is-size-7 has-text-weight-light has-text-info">
+                {{ if ne .Params.completed nil }}
+                {{ dateFormat "Jan" .Params.completed }}
+                <br>
+                {{ dateFormat "2006" .Params.completed }}
+                {{ else }}
+                {{ dateFormat "Jan" .Params.started }}
+                <br>
+                {{ dateFormat "2006" .Params.started }}
+                {{ end }}
+        </div>
+        <div class="media-content content is-clipped">
+            <div class="level is-mobile mb-2">
+                <h2 class="level-left mb-2 overflow-fix">
+                    <a class="has-text-success" href="{{.RelPermalink }}">{{ .Title }}</a>
+                </h2>
+            </div>
+            <p>{{ .Params.Description }} </p>
+        </div>
+    </article>
     {{ end }}
+</div>
+
+{{ end }}

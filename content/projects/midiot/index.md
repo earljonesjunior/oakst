@@ -5,10 +5,9 @@ slug: "midiot"
 draft: false
 tags: ["hardware", "firmware", "iot"]
 project: "midiot"
-
-inProgress: false
+completed: 2019-03-01
 started: 2019-02-01
-completed: 2019-02-25
+
 description: "I wanted a way to play my cheap Casio keyboard over the internet. "
 ---
 
@@ -25,7 +24,6 @@ I cheated and used an Adafruit Huzzah Feather M0 as a development platform. Ardu
 ![guts][guts]
 
 The webapp is no-longer up and running but the source code, board gerbers, and etc can be found on my [Github](https:\/\/github.com\/bruthaearl\/midiot).
-
 
 [display]: /projects/midiot/display.jpg "Final product"
 [guts]: /projects/midiot/guts.jpg "Gut shot"

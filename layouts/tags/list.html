@@ -1,17 +1,39 @@
 {{ define "main" }}
-<p>this is a list page</p>
 
-<section>
-    <h1>Tag: {{ .Title }}</h1>
-    <ul>
-        {{ range .Pages }}
-        <li>
-            <h2>
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
+{{ range .Pages.GroupBy "Section"}}
+<h1 class="mb-5">
+    <span class="is-uppercase">{{ .Key }}</span> tagged <span class="is-italic has-text-warning">#{{ $.Title }}</span>
+</h1>
+
+{{ range .Pages }}
+{{ $date := .Date}}
+{{ if ne .Params.started nil }}
+{{ $date = .Params.started}}
+{{ end }}
+{{ if ne .Params.completed nil }}
+{{ $date = .Params.completed}}
+{{ end }}
+
+<article class="media">
+    <div class="media-left mr-5">
+        <p class="is-size-7 has-text-weight-light has-text-info">
+            {{ dateFormat "Jan" $date }}
+            <br>
+            {{ dateFormat "2006" $date }}
+        </p>
+    </div>
+    <div class="media-content content is-clipped">
+        <div class="level is-mobile mb-2">
+            <h2 class="level-left mb-2 overflow-fix">
+                <a class="has-text-success" href="{{.RelPermalink }}">{{ .Title }}</a>
             </h2>
-            <time>{{ .Date.Format (.Site.Params.dateform | default "January 2006") }}</time>
-        </li>
-        {{ end }}
-    </ul>
-</section>
+        </div>
+        <p>{{ .Params.Description }} </p>
+    </div>
+</article>
+
+{{ end }}
+<hr>
+{{ end }}
+
 {{ end }}

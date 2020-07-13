@@ -1,17 +1,18 @@
 {{ define "main" }}
-<!--
-<nav class="breadcrumb" aria-label="breadcrumbs">
-    <ul class="subtitle">
-        <li><a href="/projects">Projects</a></li>
-        <li class="is-active"><a href="#">{{ .Title }}</a></li>
-    </ul>
-</nav>
 
--->
+<h1 class="">{{ .Title }}</h1>
 
-<h3 class="has-text-weight-normal mb-5">{{ .Title }}</h1>
+<p class="is-size-6 has-text-weight-light has-text-info">
+    {{ dateFormat "Jan 2006" .Params.started}} - 
+    {{ if ne .Params.completed nil }}
+    {{ dateFormat "Jan 2006" .Params.completed}}
+    {{ else }}
+    Present
+    {{ end }}   
+</p>
+
 <div class="content">
-{{ .Content }}
+    {{ .Content }}
 </div>
-{{ end }}
 
+{{ end }}

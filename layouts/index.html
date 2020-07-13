@@ -1,17 +1,6 @@
 {{ define "main" }}
 <div class="hero content">
-  <h1 class="title is-2 has-text-weight-normal">{{ .Params.heading }}</h1>
+  <h1 class="is-size-1 has-text-weight-light">{{ .Params.heading }}</h1>
   {{ .Content }}
-</div>
-{{ end }}
-
-
-{{ define "tag-bar"}}
-<div class="hero-body"></div>
-<div class="tags">
-  <span class="tag ">#software</span>
-  <span class="tag ">#hardware</span>
-  <span class="tag ">#misc.</span>
-  <span class="tag ">#other.</span>
 </div>
 {{ end }}

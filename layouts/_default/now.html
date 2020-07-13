@@ -1,0 +1,7 @@
+{{ define "main" }}
+<h1 class="is-uppercase">What I'm Doing Now</h1>
+<p class="is-size-6 has-text-weight-light has-text-info is-italic">
+  Updated {{dateFormat "Jan 01, 2006" .Lastmod }}
+</p>
+{{ .Content }}
+{{ end }}

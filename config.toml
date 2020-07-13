@@ -4,14 +4,19 @@
 
   [menu]
     [[menu.main]]
-        name = "About"
-        url = "/"
-        weight = 30
-    [[menu.main2]]
         name = "Notes"
-        url = "/notes/"
+        url = "/notes"
         weight = 20
     [[menu.main]]
         name = "Projects"
         url = "/projects"
         weight = 10
+    [[menu.main]]
+        name = "Now"
+        url = "/now"
+        weight = 40
+    [[menu.main]]
+        name = "About"
+        url = "/"
+        weight = 30
+

@@ -1,4 +1,4 @@
-<div class="content has-text-right">
+<div class="content has-text-centered tagbar">
 
     {{ $pageTags := slice "" }}
     {{ range (.GetTerms "tags") }}
@@ -8,12 +8,10 @@
     {{ range site.Taxonomies.tags }}
     {{ $isActive := or (in $pageTags .Page.LinkTitle) ( eq $.Page.LinkTitle .Page.LinkTitle)}}
 
-    
-    <a class="tag {{ if $isActive }} is-link is-light {{ else }} is-white {{ end }}" href="{{ .Page.Permalink }}">
+    <a class="tag {{ if $isActive }} is-warning is-light {{ else }} is-white {{ end }}" href="{{ .Page.Permalink }}">
         #{{ .Page.Title }}
-        <br>
     </a>
-    <br>
+
     {{ end }}
 
 </div>
