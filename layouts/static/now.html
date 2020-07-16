@@ -1,0 +1,12 @@
+{{ define "main" }}
+<h1 class="is-uppercase">What am I up to?</h1>
+<p class="is-size-6 has-text-weight-light has-text-info is-italic">
+  Updated {{dateFormat "Jan 01, 2006" .Lastmod }}
+</p>
+{{ .Content }}
+<br>
+<p class="has-text-weight-light is-italic">
+  What's a now page? Read more about it <a href="https://nownownow.com/about" target="_blank">here</a>.
+</p>
+
+{{ end }}

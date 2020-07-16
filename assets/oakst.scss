@@ -1,5 +1,6 @@
 @charset "utf-8";
 
+
 $turquoise: #2a9d8f;
 $blue: #264653;
 
@@ -24,10 +25,34 @@ $link: $pictorial-carmine;
 $warning: $tart-orange;
 $success: $black1;
 $info: $black4;
+$code: $black4;
+
+$input-focus-border-color: $success;
+$input-arrow: $success;
 
 $footer-padding: 1.5rem 1.5rem 1.5rem;
 
-@import "./bulma-0.9.0/bulma.sass";
+//@import "./bulma-0.9.0/bulma.sass";
+@import "./bulma-0.9.0/sass/utilities/_all.sass";
+@import "./bulma-0.9.0/sass/base/_all.sass";
+@import "./bulma-0.9.0/sass/helpers/_all.sass";
+@import "./bulma-0.9.0/sass/layout/_all.sass";
+//@import "./bulma-0.9.0/sass/components/_all.sass";
+@import "./bulma-0.9.0/sass/components/level.sass";
+@import "./bulma-0.9.0/sass/components/menu.sass";
+@import "./bulma-0.9.0/sass/components/navbar.sass";
+@import "./bulma-0.9.0/sass/components/media.sass";
+//@import "./bulma-0.9.0/sass/elements/_all.sass";
+@import "./bulma-0.9.0/sass/elements/button.sass";
+@import "./bulma-0.9.0/sass/elements/container.sass";
+@import "./bulma-0.9.0/sass/elements/content.sass";
+@import "./bulma-0.9.0/sass/elements/image.sass";
+@import "./bulma-0.9.0/sass/elements/other.sass";
+@import "./bulma-0.9.0/sass/elements/tag.sass";
+@import "./bulma-0.9.0/sass/elements/title.sass";
+@import "./bulma-0.9.0/sass/grid/columns.sass";
+@import "./bulma-0.9.0/sass/form/_all.sass";
+
 
 h1 {
   font-size: $size-3 !important;
@@ -130,3 +155,4 @@ body {
     margin-right: auto;
     max-width: 100%;
 }
+

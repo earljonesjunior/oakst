@@ -1,6 +1,6 @@
-  baseURL = "http://example.org/"
+  baseURL = "http://oakst.io/"
   languageCode = "en-us"
-  title = "My New Hugo Site"
+  title = "Oak St. Electronics"
 
   [menu]
     [[menu.main]]
@@ -19,4 +19,19 @@
         name = "About"
         url = "/"
         weight = 30
+    [[menu.main]]
+        name = "Contact"
+        url = "/contact"
+        weight = 31
 
+[markup]
+  [markup.highlight]
+    codeFences = false
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "paraiso-dark"
+    tabWidth = 4

@@ -16,21 +16,21 @@ need to create the folder if it does not exist. Hugo will search this directory 
 
 Create a new SCSS stylesheet in the `/assets` directory. We'll call it `stylesheet.scss`. This is the
 stylesheet you'll use to import the Bulma stylesheets and customize the default variables. The
-[Bulma documentation](https://bulma.io/documentation/customize/concepts/) is well written but here's 
-an example what it might look like:
+[Bulma documentation](https://bulma.io/documentation/customize/concepts/) shows you all of the variables that
+you can customize. Here's a snipit from this website's stylesheet:
 
 ```scss
-// stylesheet.scss
+// assets/stylesheet.scss
 @charset "utf-8";
 
-// define your Bulma variables first
+// Variable overrides come before you import Bulma
 $primary: #f05444;
 $size-1: 2rem;
 
-// then import Bulma
+// import Bulma
 @import "./bulma-0.9.0/bulma.sass";
 
-// then, if needed, define that override or use Bulma mixins
+// styles that use the Bulma mixins come after you import Bulma
 #navMenu{
     @include mobile{
         display: none;
@@ -44,8 +44,9 @@ $size-1: 2rem;
 }
 ```
 
-Take note the order of the steps from the above example. You first define your variables, THEN you import
-Bulma, THEN you use the Bulma mixins.
+Take note the order of the steps from the above example. You first define your variables, then you import
+Bulma, then you can use the Bulma mixins. I use the `@include mobile` mixin to hide the mobile navigation
+menu when the page is viewed on wider viewports.
 
 Bulma was designed in such a way where it's possible (and recommended) to import only the styles that you
 need to decrease page load times and save some bandwidth. Check out how that's done in the [documentation](https://bulma.io/documentation/customize/with-node-sass/#6-add-your-own-bulma-styles).
@@ -71,4 +72,4 @@ every page in my website. This is what your head might look like:
 ```
 
 The line surrounded by the brackets is where the magic happens. Hugo gets the SCSS file and transpiles
-it into CSS, and minifies it all in one step. How easy is that?
+it into CSS, and minifies it all in one step. How simple is that?

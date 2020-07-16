@@ -1,0 +1,35 @@
+{{ define "main" }}
+<h1 class="is-uppercase">Contact</h1>
+{{ .Content }}
+
+<form name="contact" method="POST" data-netlify="true">
+    <div class="field">
+        <label class="label">Name</label>
+        <div class="control">
+            <input class="input" type="text" required="true" name="name" placeholder="Your Name">
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label">Email</label>
+        <div class="control">
+            <input class="input" type="email" required="true" name="email" placeholder="Your Email">
+        </div>
+    </div>
+
+    <div class="field">
+        <label class="label">Message</label>
+        <div class="control">
+            <textarea class="textarea" required="true" name="message" placeholder="What's up?"></textarea>
+        </div>
+    </div>
+
+    <div class="field is-grouped">
+        <div class="control">
+            <button class="button is-dark">Submit</button>
+        </div>
+    </div>
+
+</form>
+
+{{ end }}

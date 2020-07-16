@@ -5,7 +5,8 @@ heading: "Howdy, I'm Jake."
 I'm a "fuller stack" embedded systems engineer and IoT developer with experience in
 front-end, back-end, and edge hardware systems. 
 
-I have many different different hobbies, none of which I'm very good at and only a few of which I actually enjoy.
-
-
 This is Oak St. Electronics, my personal notebook and portfolio.
+
+I break apart this website into two main sections: [Projects](./projects), where you can find information about personal projects that I feel are worthy of their own page, and [Notes](./notes), a blog where you can find lab notes and tutorials and whatever else I find interesting.
+
+Want to get in touch? [Drop me a line](./contact).
