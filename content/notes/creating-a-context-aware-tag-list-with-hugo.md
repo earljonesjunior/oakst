@@ -1,5 +1,5 @@
 ---
-title: "Create a Context-Aware Tag List With Hugo"
+title: "Creating a Context-Aware Tag List With Hugo"
 date: 2020-07-15T15:41:52-05:00
 slug: ""
 draft: false
