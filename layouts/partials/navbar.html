@@ -1,0 +1,35 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            <img src="/logo.png">
+        </a>
+        <h2 class="navbar-item ">OAK ST. ELECTRONICS</h2>
+
+
+        <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+            data-target="navbarBasicExample">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navbarBasicExample" class="navbar-menu">
+        <div class="navbar-start">
+        </div>
+
+        <div class="navbar-end">
+            {{ $currentPage := . }}
+            {{ range .Site.Menus.main }}
+            {{ $activeClass := ""}}
+            {{ $isActive := or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }}
+            {{ $isActive = or $isActive (eq .Name $currentPage.Title) }}
+            {{ $isActive = or $isActive (and (eq .Name "Projects") (eq $currentPage.Section "projects"))}}
+            {{ $isActive = or $isActive (and (eq .Name "Notes") (eq $currentPage.Section "notes"))}}
+
+            <a class="navbar-item {{ if $isActive }}has-text-weight-semibold{{end}}" href="{{ .URL }}">{{ .Name }}</a>
+            </p>
+            {{ end }}
+        </div>
+    </div>
+</nav>

@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<h1 class="mb-5 is-uppercase">Projects</h1>
+<h1 class="mb-5 ">Projects</h1>
 
 <div>
     {{ range .Pages }}
@@ -8,21 +8,15 @@
         <div class="media-left mr-5">
             <p class="is-size-7 has-text-weight-light has-text-info">
                 {{ if ne .Params.completed nil }}
-                {{ dateFormat "Jan" .Params.completed }}
-                <br>
-                {{ dateFormat "2006" .Params.completed }}
+                {{ dateFormat "Jan. '06" .Params.completed }}
                 {{ else }}
-                {{ dateFormat "Jan" .Params.started }}
-                <br>
-                {{ dateFormat "2006" .Params.started }}
+                {{ dateFormat "Jan. '06" .Params.started }}
                 {{ end }}
         </div>
-        <div class="media-content content is-clipped">
-            <div class="level is-mobile mb-2">
-                <h2 class="level-left mb-2 overflow-fix">
-                    <a class="has-text-success" href="{{.RelPermalink }}">{{ .Title }}</a>
-                </h2>
-            </div>
+        <div class="media-content is-clipped">
+            <h2 class="level-left mb-2 overflow-fix">
+                <a class="" href="{{.RelPermalink }}">{{ .Title }}</a>
+            </h2>
             <p>{{ .Params.Description }} </p>
         </div>
     </article>

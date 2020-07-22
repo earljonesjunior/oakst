@@ -55,7 +55,7 @@ $footer-padding: 1.5rem 1.5rem 1.5rem;
 
 
 h1 {
-  font-size: $size-3 !important;
+  font-size: $size-4 !important;
   font-weight: 300 !important;
 }
 
@@ -81,24 +81,32 @@ h3 {
   word-wrap: break-word !important;
 }
 
+@keyframes slidein {
+  from {
+    transform: scaleY()
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
 .logo-container {
+
   display: flex;
 
   @include tablet {
     flex-direction: column;
 
     .oakst-title {
-      margin-top: 20px;
     }
   }
 
   @include mobile {
     flex-direction: row;
     align-items: center;
-    margin-bottom: 1em;
 
     .oakst-title {
-      margin-left: 30px;
       margin-bottom: 0px;
     }
   }
@@ -106,8 +114,11 @@ h3 {
 
 #navMenu {
   @include mobile {
-    display: none;
+    margin-top: 0px;
+    max-height: 0px;
+    overflow-y: hidden;
     background-color: $white-bis;
+    transition: max-height .5s ease-out, margin-top .5s ease-out;   
 
     a {
       padding: 1em !important;
@@ -115,8 +126,9 @@ h3 {
   }
 }
 
-.display-block {
-  display: block !important;
+.nav-active {
+  margin-top: 10px !important;
+  max-height: 400px !important;
 }
 
 body {

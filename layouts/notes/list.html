@@ -1,21 +1,18 @@
 {{ define "main" }}
 
-<h1 class="mb-5 is-uppercase">Notes</h1>
+<h1 class="mb-5 ">Notes</h1>
     <div>
         {{ range .Pages }}
         <article class="media">
 
             <div class="media-left mr-5">
-                <p class="is-size-7 has-text-weight-light has-text-info">{{ .Date.Format "Jan"}} <br>
-                    {{ .Date.Format "2006"}}</p>
+                <p class="is-size-7 has-text-weight-light has-text-info">{{ .Date.Format "Jan. '06"}}</p>
             </div>
 
-            <div class="media-content content is-clipped">
-                <div class="level is-mobile mb-2">
-                    <h2 class="level-left mb-2 overflow-fix">
-                        <a class="has-text-success" href="{{.RelPermalink }}">{{ .Title }}</a>
+            <div class="media-content is-clipped">
+                    <h2 class="mb-2 overflow-fix">
+                        <a class="" href="{{.RelPermalink }}">{{ .Title }}</a>
                     </h2>
-                </div>
             </div>
 
         </article>
