@@ -19,7 +19,7 @@ Similar to last year, I interfaced an 8-bit Microchip MCU with a TI 16-channel L
 drove 5 RGB LEDs plus one solid LED (16 total channels) while this year's ornament drove 16 solid LEDs. New to
 this year was a little push button that could be pressed to switch between 5 different lighting patterns.
 
-Last year's tree ornament was powered by a AAA battery. I wasn't very satisifed with the heft and thickness of 
+Last year's tree ornament was powered by a AAA battery. I wasn't very satisfied with the heft and thickness of 
 the final assembly so I instead went with a 3V CR2450 coin battery. This lowered the total current capacity
 by about 400mAh so I had to make some software changes to optimize battery life. 
 

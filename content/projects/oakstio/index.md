@@ -47,7 +47,7 @@ This is where my career started to shift from Electronics Engineer towards Web D
 is where these two fields meet, somewhere in the realm of embedded IoT systems.
 
 One of the first projects I redesigned was a multi-user data collection system. I can't get into
-details but the old way of doing things invloved propietary hardware and the LabVIEW ecosystem. My new
+details but the old way of doing things involved proprietary hardware and the LabVIEW ecosystem. My new
 system ran a [MEAN stack](https://en.wikipedia.org/wiki/MEAN_(solution_stack)) with the app served
 to end users at stations powered by single-board computers. 
 This is the project that introduced me to [Angular](https://angular.io/) and web frameworks in general.
@@ -55,7 +55,7 @@ This is the project that introduced me to [Angular](https://angular.io/) and web
 I used these new skills to redesign my website into something more personal. It turns out that Angular isn't that great for simple, static blogs.
 
 I spent a lot of time trying to figure out the best way to store my blog's content. I tried out a few
-headless CMS's but they were all very opiniated about how the data was stored and accessed. I had been
+headless CMS's but they were all very opinionated about how the data was stored and accessed. I had been
 burnt before trying to migrate content from one blogging platform to another and I wanted a storage
 format that was portable. 
 
@@ -86,7 +86,7 @@ Websites used to be build around static content but we've gotten away from the p
 web technologies have progressed.
 
 The immediate benefit is that your users can load your website that much quicker. For me and the way
-I have things configured, the biggest benefit is not having to manage a seperate database and API.
+I have things configured, the biggest benefit is not having to manage a separate database and API.
 
 I chose [Hugo](https://gohugo.io/) because I'm not a fan of JavaScript and I wanted to learn
 more about the Go programming language. My entire website lives in a GitHub repository. I also
@@ -101,7 +101,7 @@ As far as the front-end goes, this site is styled by the [Bulma](https://bulma.i
 This is my first time
 ever using a CSS framework and I've got to say, I like it. Bulma is what they call utility-first, so styling 
 can get pretty messy (eg. `<h1 class="has-text-primary is-italic is-size-2>`) but it works well with templating
-where I don't have to redefine the component very often. Bulma is also opiniated but it's easy to customize and
+where I don't have to redefine the component very often. Bulma is also opinionated but it's easy to customize and
 I think it just looks prettier than the omnipresent [Bootstrap](https://getbootstrap.com/).
 
 Anyways, this is where I'm at now. This post ended up being more autobiographical than I had planned but I

@@ -15,9 +15,7 @@ This is my first time ever touching static generation and I've been enjoying the
 Back throughout college I carried around a few 35mm point-and-shoot cameras but all of the film labs in my
 area closed down and it got increasingly expensive to shoot on film. The pictures were usually terrible
 but I liked the candid look the cheap film and cheap cameras gave the images. My buddy Ryan still shoots
-on film and he's gotten me back into the hobby and devloping my own film. I've picked up a Yashica Electro 35
-rangefinder and more recently a Nikon F2 SLR and I've been spending a good amount of time trying to learn
-as much about hobby as possible. It's as much a science as it is an art.
+on 35mm and he's got me into devloping my own film. It's as much a science as it is an art.
 
 ### Working on my Master's
 I've been working on my MSCpE for the last two years and I'm about to 

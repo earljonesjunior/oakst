@@ -13,7 +13,7 @@ completed: 2018-10-01
 description: "My brother and I collected a bunch of stranger's lost grocery lists."
 ---
  
- Both my brother and I worked in grocery stores back in college. On occasion, we'd come acress shopping lists that were either lost or discarded by customers.
+ Both my brother and I worked in grocery stores back in college. On occasion, we'd come across shopping lists that were either lost or discarded by customers.
  
   I always found these lists incredibly candid; customers created these lists without ever expecting another person to read them. These lists were penned in a shorthand known only to the shopper, often on stationery that was likely chosen by nearest reach. It was always an interesting exercise trying to piece together a customer's menu and, by extension, life. It's G-rated voyeurism.
 
