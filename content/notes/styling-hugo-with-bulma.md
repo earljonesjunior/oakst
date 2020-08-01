@@ -44,9 +44,9 @@ $size-1: 2rem;
 }
 ```
 
-Take note the order of the steps from the above example. You first define your variables, then you import
-Bulma, then you can use the Bulma mixins. I use the `@include mobile` mixin to hide the mobile navigation
-menu when the page is viewed on wider viewports.
+> Take note the order of the steps from the above example. You first define your variables, then you import
+> Bulma, then you can use the Bulma mixins. I use the `@include mobile` mixin to hide the mobile navigation
+> menu when the page is viewed on wider viewports.
 
 Bulma was designed in such a way where it's possible (and recommended) to import only the styles that you
 need to decrease page load times and save some bandwidth. Check out how that's done in the [documentation](https://bulma.io/documentation/customize/with-node-sass/#6-add-your-own-bulma-styles).

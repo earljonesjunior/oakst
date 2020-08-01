@@ -34,9 +34,9 @@ This next chunk of code grabs all of the tags for the website and checks if they
 of pages belonging to that taxonomy term. If that tag matches a tag in the `$pageTags` slice, 
 `$isActive` is set true.
 
-Note how `site` in the first line of this chunk is lowercase -
-this tells Hugo to use the global site function as the range's context. Read more about that
-[here](https://gohugo.io/variables/site/#get-the-site-object-from-a-partial).
+> Note how `site` in the first line of this chunk is lowercase -
+> this tells Hugo to use the global site function as the range's context. Read more about that
+> [here](https://gohugo.io/variables/site/#get-the-site-object-from-a-partial).
 
 ```html
 {{ range site.Taxonomies.tags }}
