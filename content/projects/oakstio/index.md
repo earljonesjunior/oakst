@@ -1,15 +1,15 @@
 ---
 title: "oakst.io"
-date: 2020-06-07T11:30:30-05:00
+date: 2016-10-01T11:30:30-05:00
 slug: "oakstio"
 draft: false
-tags: ["front-end", "web", "bulma", "hugo"]
+tags: ["front-end", "bulma", "hugo"]
 project: "oakst.io"
 
-inProgress: true
+inProgress: false
 started: 2016-10-01
-completed: 
-description: "A little bit about this website"
+completed: 2016-11-01
+description: "A little bit about this website."
 ---
 
 The design and purpose of this website has changed significantly over the years.  As my career has shifted and my abilities improved, so has this website. Here's a little bit of history and context.

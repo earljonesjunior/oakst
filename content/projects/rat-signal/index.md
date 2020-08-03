@@ -1,11 +1,15 @@
 ---
-title: "Rat Signal Part 1: Project Overview"
-date: 2020-08-01T16:08:08-05:00
-slug: "rat-signal-part-1"
+title: "Rat Signal"
+date: 2020-08-03T18:45:12-05:00
+slug: "rat-signal"
 draft: false
 tags: ['mqtt', 'iot', 'node', 'node-red', 'docker']
 project: "rat-signal"
-description: ""
+
+inProgress: true
+completed: 
+started: 2020-08-01
+description: "Surf report data injected into my smart home."
 ---
 
 Earlier this year, I decided to finally do the one thing every young man dreams about: 
@@ -53,7 +57,7 @@ The third device is more of a wildcard proof of concept. I haven't fleshed out a
 
 # The Rat Signal Series:
 
-- *[Rat Signal Part 1: Overview](/notes/rat-signal-part-1)*
+- [Rat Signal Part 1: Overview](/notes/rat-signal-part-1)
 - [Rat Signal Part 2: The Broker](/notes/rat-signal-part-2)
 - [Rat Signal Part 3: The Endpoint](/notes/rat-signal-part-3)
 - [Rat Signal Part 4: The Middleman](/notes/rat-signal-part-4)
