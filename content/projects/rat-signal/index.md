@@ -37,7 +37,7 @@ Using MQTT, Rat Signal pushes forecast data from [Magic Seaweed](https://magicse
 forecasting website and I've been checking their report since high school.
 
 Rat Signal is a modern application following the paradigms of microservice architecture. All this means
-is tha Rat Signal is composed of several different independent pieces with each piece performing a specific
+is that Rat Signal is composed of several different independent pieces with each piece performing a specific
 job. From my professional experience I've found this method of development much more enjoyable than managing
 one major monolithic application.
 
