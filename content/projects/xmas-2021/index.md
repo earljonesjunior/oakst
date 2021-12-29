@@ -88,8 +88,8 @@ The tape semi-circles are just exposed copper plated with tin.
 ![pcb][pcb]
 
 I'm pretty happy with how things turned out this year.
-
-If you want, you can watch the assembly process below.
+The source code and design files can be found in my [Github repo](https://github.com/bruthaearl/chrimbus2021).
+And, if you want, you can watch the assembly process below.
 
 {{< youtube txI6bzVMPFU >}}
 
