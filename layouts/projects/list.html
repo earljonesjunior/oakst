@@ -8,9 +8,9 @@
         <div class="media-left mr-5">
             <p class="is-size-7 has-text-weight-light has-text-info">
                 {{ if ne .Params.completed nil }}
-                {{ dateFormat "Jan. '06" .Params.completed }}
+                {{ dateFormat "Jan '06" .Params.completed }}
                 {{ else }}
-                {{ dateFormat "Jan. '06" .Params.started }}
+                {{ dateFormat "Jan '06" .Params.started }}
                 {{ end }}
         </div>
         <div class="media-content is-clipped">
