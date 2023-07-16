@@ -65,7 +65,7 @@ problem/
 
 ### Building
 
-The makefile is already configured to run the tests via the command `make test`. Modify `tasks.json` to make this command the default build task:
+The makefile is already configured to build & test, clean, and build without testing. The makefile also passes the -g flag to the compiler by default, enabling debugging symbols in the output. These tasks can be launched through VSCode by adding these tasks to tasks.json:
 
 ```json
 // tasks.json
@@ -75,7 +75,7 @@ The makefile is already configured to run the tests via the command `make test`.
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "build",
+            "label": "exercism: test",
             "type": "shell",
             "command": "make",
             "args": [
@@ -85,6 +85,25 @@ The makefile is already configured to run the tests via the command `make test`.
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "label": "exercism: clean",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "clean"
+            ]
+        },
+        {
+            "label": "exercism: compile",
+            "type": "shell",
+            "command": "make",
+            "args": [
+                "tests.out"
+            ],
+            "group": {
+                "kind": "build"
+            }
         }
     ]
 }
@@ -92,7 +111,7 @@ The makefile is already configured to run the tests via the command `make test`.
 
 ### Debugging
 
-To configure the debugger, modify `launch.json` as such:
+To compile the code and launch the debugger, modify `launch.json` as such:
 
 ```json
 // launch.json
@@ -120,10 +139,8 @@ To configure the debugger, modify `launch.json` as such:
                     "ignoreFailures": true
                 }
             ],
-            "preLaunchTask": "build"
+            "preLaunchTask": "exercism: compile"
         }
     ]
 }
 ```
-
-This configuration firsts runs the build task from the previous step and then launches the GDB debugger within VSCode. That's it!
