@@ -1,0 +1,20 @@
+{{ define "main" }}
+
+<div>
+    {{ range .Pages }}
+    <article class="media">
+        <div class="media-left mr-5">
+
+        </div>
+        <div class="media-content is-clipped">
+            <h2 class="level-left mb-2 overflow-fix">
+                <a class="" href="{{.RelPermalink }}">{{ .Title }}</a>
+            </h2>
+            <p>{{ .Params.Description }} </p>
+        </div>
+    </article>
+    {{ end }}
+</div>
+
+
+{{ end }}
